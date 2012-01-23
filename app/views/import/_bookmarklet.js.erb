@@ -5,7 +5,7 @@ if(wl.href.indexOf(u)<0){
 };
 var j=jQuery;
 var x = j(".mdpLink").map(function(){return this.id}).get().join("+");
-j('body').append('<img src="http://localhost:3000/am?ids='+x+'">');
+j('body').append('<img src="<%= root_url %>am?ids='+x+'">');
 setTimeout(function(){
     wl.href=j(".next").get()[0].href;
   }, 1000);

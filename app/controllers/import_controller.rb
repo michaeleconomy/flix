@@ -1,4 +1,3 @@
-require 'lib/netflix_ratings_parser'
 class ImportController < ApplicationController
   before_filter :require_login, :only => [:index]
   before_filter :require_netflix_login, :only => [:index]
