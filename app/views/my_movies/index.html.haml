@@ -1,0 +1,13 @@
+%a(href="/import") import my movies from netflix
+.ratings
+  - if @ratings.empty?
+    You don't have any movies yet!
+  - else
+    #ratings
+      = render :partial => 'rating_row', :collection => @ratings
+    = will_paginate @ratings
+:javascript
+  $('#ratings').infinitescroll({
+      navSelector: ".pagination",
+      nextSelector: ".pagination a:last",
+      itemSelector: ".rating"})

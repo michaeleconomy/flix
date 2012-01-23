@@ -1,0 +1,14 @@
+= h1_title "Import your movies from netflix"
+
+%p
+  Bookmark this link:
+  %a{:href => "javascript:#{render 'bookmarklet.js'}"} import my movies from netflix
+  (you can drag it into your browser bar)
+
+%p
+  Next, click the link until you've gone through every page of your reviews on netflix
+
+%p
+  Finally, return to
+  = link_to root_url, root_url
+  to see the movies that were added.

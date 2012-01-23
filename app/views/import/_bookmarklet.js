@@ -1,0 +1,11 @@
+var wl=window.location;
+var u="http://movies.netflix.com/MoviesYouveSeen";
+if(wl.href.indexOf(u)<0){
+  wl.href = u;
+};
+var j=jQuery;
+var x = j(".mdpLink").map(function(){return this.id}).get().join("+");
+j('body').append('<img src="http://localhost:3000/am?ids='+x+'">');
+setTimeout(function(){
+    wl.href=j(".next").get()[0].href;
+  }, 1000);

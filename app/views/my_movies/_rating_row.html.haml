@@ -1,0 +1,10 @@
+- rating = rating_row
+- movie = rating.movie
+.rating
+  %a{:href => movie_path(movie)}
+    %img.cover{:src => movie.large_image_url}
+  = link_to_ar(movie, :class => "title")
+  - if rating.rating
+    .stars
+      - rating.rating.times do
+        = image_tag('star.png')
